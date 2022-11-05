@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Sen', sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+
+.nabar-container{
+    display: flex;
+    align-items: center;
+    /* background-color: blanchedalmond; */
+    padding: 0 50px;
+    height: 100%;
+    color: #fff;
+}
+
+.logo-container{
+    flex: 1;
+    /* background-color: green; */
+}
+
+.logo{
+    font-family: 'Sen', sans-serif;
+    font-size: 30px;
+    color: #4dbf00;
+}
+
+.menu-container{
+    flex: 6;
+    /* background-color: blue; */
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item{
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.profile-container{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0 20px;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+    right: 1px;
+    cursor: pointer;
+    /* transition: 1s ease all; */
+}
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.left-menu-icon{
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.container{
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: #fff;
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.featured-content{
+    height: 50vh;
+    padding: 50px;
+}
+
+
+.f-title{
+    width: 200px;
+}
+
+.f-desc{
+    width: 1000px;
+    color: lightslategray;
+    margin: 30px 0;
+}
+
+.f-button{
+    background-color: #4dbf00;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.movie-list-container{
+    padding: 0 20px;
+    margin-top: 100px;
+}
+
+.movie-list-item-img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list{
+    display: flex;
+    height: 300px;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.4;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+}
+
+.movie-list-item-title{
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item-desc{
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 60px;
+    left: 54px;
+    width: 230px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item-button{
+    background-color: #4dbf00;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.arrow{
+    font-size: 80px;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    color: lightslategray;
+    opacity: 0.8;
+}
+
+
+.container.active{
+    background-color: #fff;
+}
+
+.movie-list-title.active{
+    color: black;
+}
+
+
+
+.navbar.active{
+    background-color: #fff;
+}
+
+.profile-container.active{
+    color: black;
+}
+
+.menu-container.active{
+    color: black;
+}
+
+.sidebar.active{
+    background-color: #fff;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: #151515;
+}
+
+.toggle-ball.active{
+    background-color: #fff;
+    transform: translateX(-20px);
+}
